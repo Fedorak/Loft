@@ -199,7 +199,7 @@ module.exports = async function (waw) {
 			}
 			user = new User();
 			user.is = {
-				admin: false
+				admin: true
 			};
 			user.email = req.body.email.toLowerCase();
 			user.reg_email = req.body.email.toLowerCase();

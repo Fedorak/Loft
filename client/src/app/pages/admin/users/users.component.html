@@ -1,20 +1,20 @@
 <div class="users container w-card _pd">
-	<div class="users__header w-card__header">Users (Admin)</div>
+	<div class="users__header w-card__header"> Користувач (Адміністратор)</div>
     <form (ngSubmit)="us.create(new_user); new_user = us.empty()" class="users-field">
         <label class="w-forms">
-            <span class="w-forms__title">New User</span>
+            <span class="w-forms__title">Новий користувач</span>
             <input class="w-forms__input" type="text" [(ngModel)]="new_user.email" name="new user" placeholder="Email">
         </label>
-        <button class="w-btn _primary" type="submit" [disabled]="!ui.valid(new_user.email)">Create</button>
+        <button class="w-btn _primary" type="submit" [disabled]="!ui.valid(new_user.email)">Створити</button>
     </form>
     <div class="w-table-wrap">
         <table class="w-table">
             <thead class="w-table-header">
                 <tr class="w-table-header__tr">
-                    <th class="w-table__th user">User</th>
-                    <th class="w-table__th email">Email</th>
+                    <th class="w-table__th user">Користувач</th>
+                    <th class="w-table__th email">Електрона адреса</th>
                     <th class="w-table__th role" *ngFor="let role of us.roles; let i = index;">{{role}}</th>
-                    <th class="w-table__th actions">Actions</th>
+                    <th class="w-table__th actions">Видалити</th>
                 </tr>
             </thead>
             <tbody class="w-table-body">
@@ -22,7 +22,7 @@
                     <td class="w-table__td user">
                         <div class="w-table-user">
                             <div class="w-table-user__img">
-								<img [src]="user.avatarUrl || 'assets/default.png'" alt="User Avatar" height="50" width="50"></div>
+								<img [src]="user.avatarUrl || 'assets/avatar.png'" alt="User Avatar" height="50" width="50"></div>
                             <div class="w-table-user__text">{{user.name}}</div>
                         </div>
                     </td>

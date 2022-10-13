@@ -58,7 +58,7 @@
         width: 24px;
         height: 24px;
         border-radius: var(--b-radius-img);
-        background: var(--c-primary);
+        background: var(--c-error);
         @include flexBox(flex, null, center, center, null);
         transition: var(--transition);
     }

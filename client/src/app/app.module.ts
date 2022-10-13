@@ -31,11 +31,29 @@ const routes: Routes = [{
 	canActivate: [Authenticated],
 	component: UserComponent,
 	children: [/* user */{
+		path: 'project',
+		canActivate: [MetaGuard],
+		data: {
+			meta: {
+				title: 'Project'
+			}
+		},
+		loadChildren: () => import('./pages/user/project/project.module').then(m => m.ProjectModule)
+	}, {
+		path: 'dashboard',
+		canActivate: [MetaGuard],
+		data: {
+			meta: {
+				title: 'Users'
+			}
+		},
+		loadChildren: () => import('./pages/user/dashboard/dashboard.module').then(m => m.DashboardModule)
+	}, {
 		path: 'profile',
 		canActivate: [MetaGuard],
 		data: {
 			meta: {
-				title: 'My Profile'
+				title: 'Users'
 			}
 		},
 		loadChildren: () => import('./pages/user/profile/profile.module').then(m => m.ProfileModule)

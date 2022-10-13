@@ -16,9 +16,9 @@
     cursor: pointer;
     margin: 5px;
     &._primary {
-        background-color: var(--c-primary);
+        background-color: var(--c-error);
         &:hover {
-            background-color: var(--c-primary-hover);
+            background-color: var(--c-error-hover);
         }
     }
     &._second {
